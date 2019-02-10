@@ -14,7 +14,7 @@ public class CucumberTestRunner extends MonitoringInstrumentation {
         super.onCreate(bundle);
         //note you can put those in CucumberOptions also
         bundle.putString("features", "features");
-        bundle.putString("glue", "edu.ucsd.cse110.cuteimagesapp.test.steps");
+        bundle.putString("glue", "edu.ucsd.cse110.calculator.test.steps");
         //bundle.putString("tags", "~@skipAndroid");
         this.cucumberInstrumentationCore.create(bundle);
         start();

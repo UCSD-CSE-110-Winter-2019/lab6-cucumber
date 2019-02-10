@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "edu.ucsd.cse110.cuteimagesapp"
+        applicationId "edu.ucsd.cse110.calculator"
         minSdkVersion 24
         targetSdkVersion 27
         versionCode 1
@@ -45,6 +45,6 @@ dependencies {
 
 def getTestRunner() {
     project.hasProperty('cucumber') ?
-            "edu.ucsd.cse110.cuteimagesapp.CucumberTestRunner" :
+            "edu.ucsd.cse110.calculator.CucumberTestRunner" :
             "android.support.test.runner.AndroidJUnitRunner"
 }
