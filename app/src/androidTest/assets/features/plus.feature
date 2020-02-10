@@ -1,11 +1,12 @@
-Feature: Do calculation using +
+# language: nl
+Functionaliteit: Doe berekening met +
 
-  Scenario: Add 2 numbers
-    Given a main activity
-    When the user enters 123 in the first text field
-    And the user enters 456 in the second text field
-    And the user clicks the plus button
-    Then the answer is 579
+  Scenario: Tel 2 nummers op
+    Gegeven een hoofdactiviteit
+    Als de gebruiker 123 invoert in het eerste tekstveld
+    En de gebruiker 456 invoert in het tweede tekstveld
+    En de gebruiker klikt op de plus knop
+    Dan is het antwoord 579
 
   @skipAndroid
   Scenario: we gonna skip this one for android

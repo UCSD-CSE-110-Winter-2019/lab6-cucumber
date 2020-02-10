@@ -13,6 +13,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.nl.Gegeven;
 import edu.ucsd.cse110.calculator.MainActivity;
 import edu.ucsd.cse110.calculator.R;
 
@@ -40,6 +41,8 @@ public class SharedSteps {
     @Before
     public void setup() {
         Intents.init();
+        nameIdMap.put("eerste", "number_1");
+        nameIdMap.put("tweede", "number_2");
         nameIdMap.put("first", "number_1");
         nameIdMap.put("second", "number_2");
     }
@@ -50,6 +53,7 @@ public class SharedSteps {
         Intents.release();
     }
 
+    @Gegeven("een hoofdactiviteit")
     @Given("a main activity")
     public void aMainActivity() {
         System.out.println("STARTING MAINACTIVITY");
@@ -67,7 +71,8 @@ public class SharedSteps {
         }
     }
 
-    @When("^the user enters (\\d+) in the (.*) text field$")
+    @When("^de gebruiker (\\d+) invoert in het (.*) tekstveld$")
+//    @When("^the user enters (\\d+) in the (.*) text field$")
     public void theUserEntersANumberInTheEdittextFieldWithId(int number, String id) throws Throwable {
         int layoutId = getLayoutIdFromString(nameIdMap.get(id));
         onView(withId(layoutId))
@@ -75,14 +80,14 @@ public class SharedSteps {
                 .perform(typeText("" + number));
     }
 
-    @And("^the user clicks the plus button$")
+    @And("^de gebruiker klikt op de plus knop$")
     public void theUserClicksThePlusButton() throws Throwable {
         onView(withId(R.id.btn_plus))
                 .check(matches(isDisplayed()))
                 .perform(click());
     }
 
-    @Then("^the answer is 579$")
+    @Then("^is het antwoord 579$")
     public void theAnswerIs() throws Throwable {
         onView(withId(R.id.answer))
                 .check(matches(isDisplayed()))
