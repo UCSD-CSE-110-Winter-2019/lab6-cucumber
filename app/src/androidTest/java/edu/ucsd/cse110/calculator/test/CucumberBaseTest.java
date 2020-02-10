@@ -2,9 +2,10 @@ package edu.ucsd.cse110.calculator.test;
 
 import android.app.Activity;
 import android.app.Instrumentation;
-import android.support.test.runner.lifecycle.ActivityLifecycleMonitor;
-import android.support.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
-import android.support.test.runner.lifecycle.Stage;
+
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitor;
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
+import androidx.test.runner.lifecycle.Stage;
 
 import java.util.Collection;
 import java.util.HashSet;

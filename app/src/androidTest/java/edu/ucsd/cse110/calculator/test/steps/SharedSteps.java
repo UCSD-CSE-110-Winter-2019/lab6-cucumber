@@ -1,7 +1,7 @@
 package edu.ucsd.cse110.calculator.test.steps;
 
-import android.support.test.espresso.intent.Intents;
-import android.support.test.rule.ActivityTestRule;
+import androidx.test.espresso.intent.Intents;
+import androidx.test.rule.ActivityTestRule;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -16,15 +16,14 @@ import cucumber.api.java.en.When;
 import edu.ucsd.cse110.calculator.MainActivity;
 import edu.ucsd.cse110.calculator.R;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.typeText;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.contains;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.typeText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.assertThat;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class SharedSteps {
